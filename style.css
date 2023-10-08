@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 :root {
-  --primary-color: black;
-  --primary-color-dark: black;
-  --secondary-color: black;
+  --primary-color: rgb(42, 34, 34);
+  --primary-color-dark: rgb(42, 34, 34);
+  --secondary-color: rgb(42, 34, 34);
   --text-dark: #1f2937;
   --text-light: #6b7280;
   --extra-light: #faf5ff;
@@ -17,9 +17,6 @@
   background: white;
 }
 
-.ri-menu-line{
-    color: black;
-}
 a {
   text-decoration: none;
 }
@@ -40,20 +37,24 @@ nav {
 .nav__content {
   max-width: var(--max-width);
   margin: auto;
+  background: var(--primary-color);
   padding: 1.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: solid 1px;
 }
 
 nav .logo a {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--primary-color);
+  border: 2px solid transparent;
+  color: white;
   transition: 0.3s;
+  background: var(--primary-color);
 }
 nav .logo a:hover {
-  color: var(--primary-color-dark);
+  color: white;
 }
 
 ul {
@@ -62,21 +63,24 @@ ul {
     gap: 1rem;
     list-style: none;
     transition: left 0.3s;
+    background:var(--primary-color);
+    
   }
   
   ul li a {
     padding: 0.5rem 1rem;
+    background: var(--primary-color);
     border: 2px solid transparent;
     text-decoration: none;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--extra-light);
     transition: 0.3s;
   }
   
   ul li a:hover {
-    border-top-color: var(--secondary-color);
-    border-bottom-color: var(--secondary-color);
-    color: var(--secondary-color);
+    border-left-color: white;
+    border-right-color: white;
+    color: white;
   }
 
   .section {
@@ -123,3 +127,49 @@ ul {
     color: var(--text-light);
     margin-bottom: 2rem;
   }
+
+  .action__btns {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .action__btns button {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .hire__me {
+    background-color: var(--primary-color);
+    color: #ffffff;
+  }
+  
+  .hire__me:hover {
+    background-color: var(--primary-color-dark);
+  }
+  
+  .portfolio {
+    color: var(--primary-color);
+  }
+  
+  .portfolio:hover {
+    background-color: var(--primary-color-dark);
+    color: #ffffff;
+  }
+  
+  .image {
+    display: grid;
+    place-items: center;
+  }
+  
+  .image img {
+    width: min(25rem, 90%);
+    border-radius: 100%;
+  }
+  
